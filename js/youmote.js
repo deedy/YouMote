@@ -1,3 +1,9 @@
+var currVol = 50;
+$(document).ready(function() {
+	writeFile({pause: false,volume: currVol});
+});
+
+
 function writeFile(writeData) {
 	$.ajax({
 		type: "POST",
@@ -10,13 +16,17 @@ function writeFile(writeData) {
 	});
 }
 
-function volumeChange() {
-	var volumestr = $('#volume').val();
-	if (isNaN(volumestr)) {
-		return;
-	}
-	var volNumber = parseInt(volumestr);
-	writeFile({volume: volNumber});
+// function volumeChange() {
+// 	var volumestr = $('#volume').val();
+// 	if (isNaN(volumestr)) {
+// 		return;
+// 	}
+// 	var volNumber = parseInt(volumestr);
+// 	writeFile({volume: volNumber});
+// }
+
+function volumeChange(change) {
+	writeFile({volume: currVol+change});
 }
 
 

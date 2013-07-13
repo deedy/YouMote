@@ -8,7 +8,7 @@ var play;
 function queryServer(){
 	$.ajax({
 		type: "GET", 
-		url: "http://www.achalv.com/dev/Yomote/server/settings", 
+		url: "http://www.achalv.com/dev/YouMote/server/settings", 
 		dataType: "json",
 		success: function(msg){
 			var state = player.getPlayerState();
@@ -38,7 +38,7 @@ function writeServerPlay(p){
 		data: {
 			play : p
 		},
-		url: "http://achalv.com/dev/Yomote/server/writeFile.php",
+		url: "http://achalv.com/dev/YouMote/server/writeFile.php",
 		success: function(data) {
 			console.log("Just wrote" + data);
 		}
@@ -52,7 +52,7 @@ $(document).ready(function(){
 		if(event.which == 97){
 			$.ajax({
 				type: "GET", 
-				url: "http://achalv.com/dev/Yomote/server/settings", 
+				url: "http://achalv.com/dev/YouMote/server/settings", 
 				dataType: "json",
 				success: function(msg){
 					console.log("Just received" + msg);
