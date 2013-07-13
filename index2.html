@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<!--meta name="viewport" content="width=device-width, initial-scale=1.0"--> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+		<title>YouMote: The YouTube remote for lazy people.</title>
+		<meta name="description" content="YouMote" />
+		<meta name="keywords" content="The YouTube remote for lazy people." />
+		<meta name="author" content="Achal Varma" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/youmote.css" />
+		<script src="./js/modernizr.custom.js"></script>
+		<script src="./js/jquery.js"></script>
+		<script src="./js/youmote.js"></script>
+  		<script src="./js/jquery.mobile.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="persistent-header">
+				<span class="mane-white">YOUMOTE</span>
+			</div>
+			<div id="controls" style="padding-top:100px;">
+			<div class="pleypoz-scrub">
+			<div id="pauseplay" value="play" class="pleypoz" onclick="toggleState();">
+			<img id="play-img" src="./img/play.png"></img><img id="pause-img" src="./img/pause.png"></img>
+			</div>
+			<div class="scrubbing" style="margin-left: 35px; margin-top: 10px; margin-bottom: 10px;">
+<div class="scrub-left" style="height: 120px; width: 120px; background: #fff; display: inline-block; padding-top: 45px; text-align: center;"><img src="./img/backward.png"></div><div class="scrub-right" style="padding-top: 45px; text-align: center; margin-left: 10px; height: 120px; width: 120px; background: #fff; display: inline-block;"><img src="./img/forward.png"></div>
+			</div>
+			<div class="volume" style="height:150px; width:250px; background: #fff; text-align: center; margin-top: 50px; padding-top: 30px; margin: 0 auto;">
+			<span class="desc-play" style="vertical-align: middle; font-size: 64px;"><div class="volume-less" style="margin-left:0px; top: 20px;display: inline-block;"><img src="./img/volume-decrease.png"></div>  <div class="volume-more" style="margin-left:150px; top: 20px; display: inline-block;"><img src="./img/volume-increase.png"></span>
+			</div>
+			</div>
+			</div>
+		</div>		
+		
+		<script>
+		
+		$(function(){
+		  // Bind the swipeleftHandler callback function to the swipe event on div.box
+		    $('.volume').on( 'swiperight', swiperightHandler );
+		 
+		  // Callback function references the event target and adds the 'swipe' class to it
+		  function swiperightHandler(event){
+    		    // $(event.target).css("opacity", opaque+=0.33);
+    		    // WRITE JAVASCRIPT FOR VOLUME decrease HERE
+		  }
+		});
+		
+		$(function(){
+		  // Bind the swipeleftHandler callback function to the swipe event on div.box
+		    $('.volume').on( 'swipeleft', swipeleftHandler );
+		 
+		  // Callback function references the event target and adds the 'swipe' class to it
+		  function swipeleftHandler(event){
+    		    //$(event.target).css("opacity", opaque-=0.33);
+    		    // WRITE JAVASCRIPT FOR VOLUME INCREASE HERE
+		  }
+		});	
+		
+		if($('.desc-play').html('Play')) {
+		$('.desc-play').on( 'tap', tapHandler );
+		  function tapHandler(event){
+    		    $(event.target).html('Pause');
+    		    }};
+		
+		</script>
+	</body>
+</html>

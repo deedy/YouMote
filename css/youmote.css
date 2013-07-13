@@ -1,0 +1,13 @@
+#pause-img {
+	display: none;
+}
+#pauseplay {
+	height:170px;
+	width:170px;
+	background: #fff;
+	text-align: center;
+	padding-top: 21px;
+	padding-left: 21px;
+	margin: 0 auto;
+	border-radius: 50%;
+}
