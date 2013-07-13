@@ -1,5 +1,6 @@
 #pause-img {
 	display: none;
+	margin-left: -20px;
 }
 #pauseplay {
 	height:170px;
@@ -11,3 +12,4 @@
 	margin: 0 auto;
 	border-radius: 50%;
 }
+
